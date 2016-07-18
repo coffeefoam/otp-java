@@ -9,11 +9,11 @@ public class PayCode {
 
     public String generatePayCode(long uid, String code) {
         int x = Integer.valueOf(code);
-        long y =  uid / x + uid * FACTORY;
+        long y =  uid / x + x * FACTORY;
 
         int z = (int) (uid % x);
 
-        String paycode = String.format("%04d%09d%03d", x, y, z);
+        String paycode = String.format("%04d|%09d|%03d", x, y, z);
         return "28" + paycode;
     }
 }

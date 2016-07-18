@@ -28,7 +28,7 @@ public class OtpCoreTest {
         String code = otpCore.getTOTP(seed);
         System.out.println("生成的密码是 " + code);
 
-        String paycode = payCode.generatePayCode(10203405609L, code);
+        String paycode = payCode.generatePayCode(1847462945, code);
         System.out.println("生成的付款码是 " + paycode);
     }
 }
